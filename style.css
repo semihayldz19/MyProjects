@@ -1,0 +1,63 @@
+.divconf{  /*EN GENEL DİV*/
+    background-color: rgb(229, 231, 255);
+    width: 100%; /*viewport width  tarayıcı ekranının tamammını kaplasın genişliği*/ 
+    height: 100%;/*viewport height -yüksekliği*/
+}
+
+.foto{
+    display: inline;
+    background-color: rgb(188, 188, 217);
+ width: 300px;
+ height: 200px;
+border-radius: 4px;
+position: absolute;
+top:0;
+right: 40px;
+margin-top: 6%;
+border-style:dotted;
+border-color: rgb(215, 154, 101);
+border-width: 3px;
+border-width: 5px;
+}
+
+.iletisim{
+    display: block;
+    background-color: rgb(136, 166, 200);
+    width: 200px;
+    height: 30px;
+    text-align: center;
+    margin-left: 6%;
+    margin-bottom: 0;
+}
+.HR{
+   width:25%;
+   margin-left: 0;
+  
+}
+.tel{
+    display: inline-block;
+    width: 300px;
+    height: 200px;
+    margin-left: 4%;
+    background-color: red;
+}
+.cv{
+
+height: 250px;
+background-color: rgb(173, 190, 213);
+margin-left: 60px;
+margin-right: 60px;
+
+
+}
+.foto1{
+  margin-left: 10px;  
+  margin-top: 10px;
+
+}
+
+
+
+
+
+
