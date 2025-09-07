@@ -18,13 +18,14 @@ ul li {
     width: 90px;
 }
 ul li:hover {
-    background-color: (198, 185, 185, 0.6)
+    background-color:rgba(200, 200, 200, 0.1);
+
     transition: 0.7;
     width: 110px;
 }
 i{
     padding-right: 10px;
-    color: rgb(38, 132, 87);
+    color: rgb(179, 180, 189);
 }
 #contact-content {
     display: block;
@@ -50,10 +51,11 @@ body{
     background-repeat: no-repeat;
     background-position: center;
     height: 100vh;
+      background-attachment: fixed; /* sabit kalmasını sağlar */
 
 }
 .name{
-    font-family:serif;
+    font-family:'Courier New', Courier, monospace;
     color: white;
     
       margin: 0;                   /*bu kısım alıntı*/
@@ -64,4 +66,18 @@ body{
     
     
 }
- 
+.kısımlar {
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+}
+ p{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+ }
+ .nav {
+    position: fixed; /*navbarı sabitledim*/
+ }
+ html{
+      scroll-behavior:auto; 
+    }
