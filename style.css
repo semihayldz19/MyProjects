@@ -71,7 +71,7 @@ body{
 .name{
     font-family:'Courier New', Courier, monospace;
     color: white;
-    
+    visibility: hidden;
       margin: 0;                   /*bu kısım alıntı*/
       height: 100vh; /* sayfanın tamamı */
       display: flex; /* flexbox aç */
