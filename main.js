@@ -11,6 +11,7 @@ function yazdir()
         index ++; // indexi bir artır ki sonraki karaktere geçsin
         setTimeout(yazdir,150); //150 milisaniye sonra fonksiyonu tekrar çağırır
     }
+    
 }
 yazdir(); // tanımladığımız fonksiyonu çağırdık.
 
