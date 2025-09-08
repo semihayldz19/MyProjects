@@ -84,6 +84,7 @@ body{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     color: white;
+    margin-top: 15%;
 }
  p{
     color: white;
@@ -96,3 +97,12 @@ body{
  html{
       scroll-behavior:auto; 
     }
+
+h2{
+    color: white;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+
+
