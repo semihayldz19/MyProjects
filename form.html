@@ -1,56 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+   
     <title>Document</title>
 </head>
+
 <body>
-    <section><!--Sayfa içeriğini daha anlamlı, düzenli ve erişilebilir hale getirmek için.SEO (arama motoru optimizasyonu) için iyi.-->
-<div class="div-form">
-<form action="form.js" method="">
-<table>
-
-</table>
-<tr>
-    <td>Adınız: </td>
-    <td><input type="text"></td>
-</tr>
-<tr>
-    <td>Soyadınız: </td>
-    <td><input type="text"></td>
-</tr>
-<tr>
-    <td>E-mail:</td>
-    <td><input type="email" placeholder="e-mail"></td>
-</tr>
-<tr>
-    <td>Cinsiyet</td>
-    <td><input type="radio" checked="true" value="kadın" >
-    <label>Kadın</label>
-    <input type="radio" value="Erkek">
-    <label>Erkek</label>
-    </td>
-</tr>
-<tr>
-    <td>Doğum Tarihi:</td>
-    <td><input type="date"></td>
-</tr>
-
-<input type="submit" value="Gönder">
-<input type="reset" value="Temizle">
-
-
-</form>
-
-
-
-</div>
     
+    <section>
+        <!--Sayfa içeriğini daha anlamlı, düzenli ve erişilebilir hale getirmek için.SEO (arama motoru optimizasyonu) için iyi.-->
+        <div class="div-form">
+            <form id="myForm" action="#" method="post"><!--action:form verilerinin nereye gideceği--><!--form verilerinin gönderilme şekli get post -->
+                <table>
+
+                    <tr>
+                        <td>Adınız: </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>Soyadınız: </td>
+                        <td><input type="text"></td>
+                    </tr>
+                    <tr>
+                        <td>E-mail:</td>
+                        <td><input type="email" placeholder="e-mail"></td>
+                    </tr>
+                    <tr>
+                        <td>Cinsiyet</td>
+                        <td><input type="radio" checked="true" value="kadın">
+                            <label>Kadın</label>
+                            <input type="radio" value="Erkek">
+                            <label>Erkek</label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Doğum Tarihi:</td>
+                        <td><input type="date"></td>
+                    </tr>
+                    <tr>
+
+                </table>
+                <input type="submit" value="Gönder">
+                <input type="reset" value="Temizle">
+                
+            </form>
+
+        </div>
+
     </section>
+   <div id="result" style="display: none">
+    </div>
+
+
+    <script src="main.js"></script> 
     
 
-    
 </body>
+
 </html>
