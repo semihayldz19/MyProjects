@@ -15,3 +15,5 @@ function yazdir()
 }
 yazdir(); // tanımladığımız fonksiyonu çağırdık.
 
+
+
