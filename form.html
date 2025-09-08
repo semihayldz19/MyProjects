@@ -1,64 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: bold;
+      }
+      td {
+        padding: 20px;
+      }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-   
-    <title>Document</title>
-</head>
+  </style>
+    </style>
+    <title>Form</title>
+  </head>
 
-<body>
-    
+  <body>
     <section>
-        <!--Sayfa içeriğini daha anlamlı, düzenli ve erişilebilir hale getirmek için.SEO (arama motoru optimizasyonu) için iyi.-->
-        <div class="div-form">
-            <form id="myForm" action="#" method="post"><!--action:form verilerinin nereye gideceği--><!--form verilerinin gönderilme şekli get post -->
-                <table>
+      <!--Sayfa içeriğini daha anlamlı, düzenli ve erişilebilir hale getirmek için.SEO (arama motoru optimizasyonu) için iyi.-->
+       
+      <div class="div-form">
+        <form id="myForm" action="success.html" method="get">
+          <!--action:form verilerinin nereye gideceği--><!--form verilerinin gönderilme şekli get post 
+          GET: Form verilerini URL üzerinden göndermek için kullanılır.
+               Yani kullanıcı formu gönderdiğinde, tarayıcı verileri adres çubuğuna ekler:
+          
+          POST: post yapınca 405 geldi success.html bir statik HTML dosyası.
 
-                    <tr>
-                        <td>Adınız: </td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td>Soyadınız: </td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td>E-mail:</td>
-                        <td><input type="email" placeholder="e-mail"></td>
-                    </tr>
-                    <tr>
-                        <td>Cinsiyet</td>
-                        <td><input type="radio" checked="true" value="kadın">
-                            <label>Kadın</label>
-                            <input type="radio" value="Erkek">
-                            <label>Erkek</label>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>Doğum Tarihi:</td>
-                        <td><input type="date"></td>
-                    </tr>
-                    <tr>
+             Statik HTML dosyaları sadece GET ile açılabilir, POST isteğini işleyemez.
 
-                </table>
-                <input type="submit" value="Gönder">
-                <input type="reset" value="Temizle">
-                
-            </form>
+            Sunucuya veri gönderip işleyip yanıt üretmek için backend (PHP, Node.js, Python vs.) gerekir.
+            Eğer POST kullanmak istiyorsan bir backend kurmalısın
+          -->
+          <table>
+            <tr>
+              <td>Adınız:</td>
+              <td><input type="text" name="ad" required/></td>
+            </tr>
+            <tr>
+              <td>Soyadınız:</td>
+              <td><input type="text" name="soyad" required /></td>
+            </tr>
+            <tr>
+              <td>E-mail:</td>
+              <td><input type="email" placeholder="e-mail" name="email" required /></td>
+            </tr>
+            <tr>
+              <td>Cinsiyet</td>
+              <td>
+                <input type="radio" checked value="kadın" name="cinsiyet" />
+                <label>Kadın</label>
+                <input type="radio" value="Erkek" name="cinsiyet"  /> <!--hangi seçenek seçilirse form bilgileri gönderilirken value değeri gönderirli-->
+                <label>Erkek</label>
+              </td>
+            </tr>
+            <tr>
+              <td>Doğum Tarihi:</td>
+              <td><input type="date" name="dogum"/></td>
+            </tr>
+            <tr></tr>
+          </table>
 
-        </div>
-
+          <input type="submit" value="Gönder" />
+          <input type="reset" value="Temizle" />
+        </form>
+      </div>
     </section>
-   <div id="result" style="display: none">
-    </div>
-
-
-    <script src="main.js"></script> 
-    
-
-</body>
-
+   
+  
+    <script src="main.js"></script>
+  </body>
 </html>

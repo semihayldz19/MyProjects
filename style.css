@@ -1,115 +1,126 @@
 ul {
-    list-style-type: none;
-     width: 100%;
-     height:10%;
+  list-style-type: none; /*liste başına simge koymasın nokta vs kaldırdık none diyerek */
+  width: 100%;
+  height: 10%;
 }
-ul li a{
-    text-decoration: none;
-    color: rgb(165, 186, 205);
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
+ul li a {
+  text-decoration: none; /* a link verir ve altında çizgi olurdu onu kaldırdık*/
+  color: rgb(165, 186, 205);
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 ul li {
-    display: inline-block;
-    padding: 15px;
-    margin-left: -40px;
-    margin-right: 100px;
-    width: 90px;
+  display: inline-block; /*block gibi davranır:yükseklik genişlik alabilir ....inline gibi davranır :yanına diğer elementleri alabilir*/
+  padding: 15px;
+  margin-left: -40px;
+  margin-right: 100px;
+  width: 90px;
+  transition: all 0.5s ease; /* ul deki li lerde üzerine gelince animasyonlu olmasını sağlar hoverdan önce tanımlanması gerekiyormuş hover da zaten aktifleşmiş olduğu için
+  bir elementin değeri değiştiğinde animasyonu başlatır. hover a eklenirse değişim anında aktif olmadığı için çalışmaz.
+  */
 }
 ul li:hover {
-    background-color:rgba(200, 200, 200, 0.1);
-
-    transition: 0.7;
-    width: 110px;
+  background-color: rgba(200, 200, 200, 0.1);
+  width: 110px;
 }
-i{
-    padding-right: 10px;
-    color: rgb(179, 180, 189);
+i {
+  /* ikon özelliklerini verdim*/
+  padding-right: 10px;
+  color: rgb(179, 180, 189);
 }
 #contact-content {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    margin-top: 15px;
-    width: 100px;
-    margin-left: -15px;
-    margin-right: 5px;
-    display: none;
-    
+  /*iletişim için github vs eklediğim kısım */
+
+  position: absolute; /*elementi normal sayfa akışından çıkarır,istediğimiz kordinatta durabilir diğer elmentleri etkilemez*/
+  margin-top: 15px;
+  width: 100px;
+  margin-left: -15px;
+  margin-right: 5px;
+  display: none; /* ilk anda contact altındaki kısımların görünmemesi için,üzerine gelince görünecek*/
 }
 #projects-content {
-    display: block;
-    position: absolute;
-    z-index: 1;
-    margin-top: 15px;
-    width: 100px;
-    margin-left: -15px;
-    margin-right: 5px;
-    display: none;
-    
+  /*projeleri ekledim*/
+
+  position: absolute;
+  margin-top: 15px;
+  width: 100px;
+  margin-left: -15px;
+  margin-right: 5px;
+  display: none;
 }
 
 .contact-li:hover #contact-content {
-    display: block;
-    
+  /*contact-li deki contact-content id li elementin üzerine gelindiğinde yani iletişim kısmında github linkedin vs*/
+  display: block;
 }
 .contact-li:hover #projects-content {
-    display: block;
-    
+  /* aynı şekilde proje kısmında görünür hale getiriyor öncesinde none idi.*/
+  display: block;
 }
-body{
-    background-image: url("foto/starss.jpg");
-    margin: 0;
-    padding: 0;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    height: 100vh;
-    background-attachment: fixed; /* sabit kalmasını sağlar */
+body {
+  background-image: url("foto/starss.jpg"); /*arkaplana fotoğraf ekledim*/
+  margin: 0; /* tarayıcıda ilk başta kendinden gelen boşlukları kaldırır foto daha çok kenarlara yayılır*/
+  padding: 0;
+  background-size: cover; /*arkaplan alanın tamamını kaplayacak şekilde ölçeklenir*/
+  background-repeat: no-repeat; /* resmin tekrar etmesini engeller*/
+  background-position: center; /* resmi sayfanın ortasına hizalar */
+  height: 100vh; /*body nin yüksekliği sayfanın tamamı kadar olur vh=viewport height */
+  background-attachment: fixed; /* sabit kalmasını sağlar aşağı yukarı oynatsak bile*/
+}
+.name {
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  visibility: hidden; /* name kısmı tane tane geleceği için balangıçta görünmez ama sayfa boşluğu vardır eğer none olsaydı hiç boşluk ayrılmaz hemde görünmezdi*/
+  margin: 0; /*kenar boşluklarını kaldırır*/
+  height: 100vh;
+  display: flex; /*esnek kutu özelliği için*/
+  justify-content: center; /* yatayda ortala */
+  align-items: center; /* dikeyde ortala */
+}
 
-}
-.name{
-    font-family:'Courier New', Courier, monospace;
-    color: white;
-    visibility: hidden;
-      margin: 0;                   /*bu kısım alıntı*/
-      height: 100vh; /* sayfanın tamamı */
-      display: flex; /* flexbox aç */
-      justify-content: center; /* yatayda ortala */
-      align-items: center; /* dikeyde ortala */
-    
-    
-}
+/*önemli *****
+flexbox elementleri daha düzenli yerleştirmeyi sağlar
+elementin içine display: flex verirsen, o elementin çocukları artık flex kurallarına göre yerleşir
+justify-content
+
+Yatay doğrultuda çocuk elementleri nasıl hizalayacağını belirler.
+
+Örnekler:
+
+justify-content: flex-start; → baştan hizalar
+
+justify-content: center; → yatayda ortalar
+
+justify-content: flex-end; → sondan hizalar
+
+justify-content: space-between; → aradaki boşluğu eşitler*/
+
 .kısımlar {
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-    color: white;
-    margin-top: 15%;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace;
+  color: white;
+  margin-top: 15%;
 }
- p{
-    color: white;
-    font-family: 'Courier New', Courier, monospace;
- }
- .nav {
-    position: fixed; /*navbarı sabitledim*/
-    
- }
- html{
-      scroll-behavior:auto; 
-    }
+p {
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+}
+.nav {
+  position: fixed; /*navbarı sabitledim*/
+}
 
-h2{
-    color: white;
-    text-align: center;
-    margin-bottom: 5px;
+h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 5px;
 }
 .div-form {
-      display: inline-block;
-      background-color: rgba(200, 200, 200, 0.3);
-      
-  
-    }
-   
-  
-
-
+  display: inline-block;
+  background-color: rgba(200, 200, 200, 0.3);
+  padding: 20px; /*bu kısım alıntı*/
+  height: 50vh;
+  width: 50vw; /* sayfanın tamamı */
+  display: flex; /* flexbox aç */
+  justify-content: center; /* yatayda ortala */
+  align-items: center; /* dikeyde ortala */
+}
